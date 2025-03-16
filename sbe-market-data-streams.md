@@ -2,13 +2,13 @@
 
 ## General Information
 
-* The base endpoint is **stream-sbe.testnet.binance.vision** or **stream-sbe.testnet.binance.vision:9443**.
+* The base endpoint is **stream-sbe.binance.com** or **stream-sbe.binance.com:9443**.
 * To retrieve market data in JSON format, please refer to [this page](web-socket-streams.md).
 * SBE schema used for decoding the streams can be found [here](https://github.com/binance/binance-spot-api-docs/blob/master/sbe/schemas/stream_1_0.xml).
 * All symbols in stream names are **lowercase**.
 * You can subscribe to a single stream at **/ws/\<streamName\>**.
 * You can subscribe to multiple streams at **/stream?streams=\<streamName1\>/\<streamName2\>/\<streamName3\>**.
-* A single connection to **stream-sbe-binance.com** is **only valid for 24 hours**; expect to be disconnected at the 24 hour mark.
+* A single connection to **stream-sbe-binance.com** is **only valid for 24 hours**; expect to be disconnected at the 24 hour mark
 * All time and timestamp fields are in **microseconds**.
 * **An API Key is necessary for access**.
   * Only Ed25519 keys are allowed.

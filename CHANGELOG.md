@@ -1,8 +1,34 @@
 # CHANGELOG for Binance's API
 
-**Last Updated: 2025-02-12**
+**Last Updated: 2025-03-10**
 
-## 2025-02-12
+### 2025-03-10
+
+* **Notice: The following changes will happen on 2025-03-13 09:00 UTC**
+  * FIX Drop Copy sessions will have a limit of **60 messages per minute**.
+  * FIX Market Data sessions will have a limit of **2000 messages per minute**.
+  * The FIX API documentation has been updated to reflect the upcoming changes.
+* **SBE Market Data Streams will be available on March 18 2025, 07:00 UTC.** These streams offer a smaller payload and should offer better latency than the equivalent JSON streams for a subset of latency-sensitive market data streams.
+  * Streams available in SBE format:
+    * Real-time: trade stream
+    * Real-time: best bid/ask
+    * Every 100 ms: diff. depth
+    * Every 100 ms: partial book depth
+  * For more information please refer to the [SBE Market Data Streams](sbe-market-data-streams.md).
+
+---
+
+### 2025-03-05
+
+* **Notice: The following changes will happen on March 10, 2025 12:00 UTC.** <br>
+  The following request weights will be increased from 2 to 4:
+  * REST API: `GET /api/v3/aggTrade`
+  * WebSocket API: `trades.aggregate`
+* The documentation for both REST and WebSocket API has been updated to reflect the upcoming changes.
+
+---
+
+### 2025-02-12
 
 * **Notice: These changes will take effect on February 26, 2025 05:00 UTC.** Please ensure you have downloaded the latest schema before then.
 * `AggressorSide (2446)` will be rendered in the [FIX Market Data Trade Stream](fix-api.md#tradestream). The QuickFix schema [file](https://github.com/binance/binance-spot-api-docs/blob/master/fix/schemas/spot-fix-md.xml) has also been updated.

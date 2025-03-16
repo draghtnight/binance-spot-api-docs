@@ -1,11 +1,30 @@
 # CHANGELOG for Binance SPOT Testnet
 
-**Last Updated: 2025-02-28**
+**Last Updated: 2025-03-13**
 
 **Note:** All features here will only apply to the [SPOT Testnet](https://testnet.binance.vision/).
 This is not always synced with the live exchange.
 
-## 2025-02-28
+### 2025-03-13
+
+* **Notice: The following changes will happen on March 13,2025 at 05:00 UTC:**
+  * FIX Drop Copy sessions will have a limit of **60 messages per minute**.
+  * FIX Market Data sessions will have a limit of **2000 messages per minute**.
+  * The FIX API documentation has been updated to reflect the upcoming changes.
+
+---
+
+### 2025-03-05
+
+* **Notice: This is in the process of being deployed. Please consult the Spot Test Network's [homepage](https://testnet.binance.vision/) to be informed of the release completion.** <br>
+  The following request weights will be increased from 2 to 4:
+  * REST API: `GET /api/v3/aggTrade`
+  * WebSocket API: `trades.aggregate`
+* The documentation for both REST and WebSocket API has been updated to reflect the upcoming changes.
+
+---
+
+### 2025-02-28
 
 * **SBE Market Data Streams** are now available. These streams offer a smaller payload and should offer better latency than the equivalent JSON streams for a subset of latency-sensitive market data streams.
 * Streams available in SBE format:
@@ -13,7 +32,7 @@ This is not always synced with the live exchange.
   * Real-time: best bid/ask
   * Every 100 ms: diff. depth
   * Every 100 ms: partial book depth
-* For more information please refer to the [SBE Market Data Streams](https://github.com/binance/binance-spot-api-docs/blob/master/testnet/sbe-market-data-streams.md).
+* For more information please refer to the [SBE Market Data Streams](sbe-market-data-streams.md).
 
 ---
 
